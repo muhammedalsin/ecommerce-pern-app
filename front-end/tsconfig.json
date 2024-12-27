@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "sourceMap": true,                // Allow sourcemap support
-    "strictNullChecks": true,         // Enable strict null checks as a best practice
-    "module": "NodeNext",             // Specify module code generation
-    "jsx": "preserve",                // Do not change JSX, as suggested in https://react.dev/learn/typescript#adding-typescript-to-an-existing-react-project
-    "target": "es5",                  // Specify ECMAScript target version
-    "allowJs": true,                  // Allow a partial TypeScript and JavaScript codebase
-    "moduleResolution": "NodeNext",   // Node.js version >= 12
+    "sourceMap": true,               
+    "strictNullChecks": true,         
+    "module": "NodeNext",            
+    "jsx": "preserve",              
+    "target": "es5",                 
+    "allowJs": true,                 
+    "moduleResolution": "NodeNext",   
     "plugins": [
       { "name": "typescript-plugin-css-modules" }
     ],

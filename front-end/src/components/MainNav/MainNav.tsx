@@ -39,21 +39,20 @@ export default function MainNav() {
   return (
     <nav className={styles.mainNav}>
       <ul className={styles.navList}>
-        {renderNavItem("/", "Home")}
-        {renderNavItem("/category/books", "Books")}
-        {renderNavItem("/category/movies", "Movies")}
+        {renderNavItem("/", "Ana Sayfa")}
+        {renderNavItem("/category/books", "Ürünler")}
       </ul>
       
       {authData?.logged_in ?
       <ul className={styles.navList}>
-        {renderNavItem("/account", "Account")}
-        {renderNavItem("/cart", "Cart")}
-        {renderNavItem("#", "Log Out", handleClickLogOut)}
+        {renderNavItem("/account", "Hesap")}
+        {renderNavItem("/cart", "Sepet")}
+        {renderNavItem("#", "Çıkış Yap", handleClickLogOut)}
       </ul>
       :
       <ul className={styles.navList}>
-        {renderNavItem("/login", "Log In")}
-        {renderNavItem("/register", "Register")}
+        {renderNavItem("/login", "Giriş yapmak")}
+        {renderNavItem("/register", "Kayıt olmak")}
       </ul>
       }
     </nav>

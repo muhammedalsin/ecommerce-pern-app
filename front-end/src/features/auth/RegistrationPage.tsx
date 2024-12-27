@@ -3,12 +3,11 @@ import { Form, redirect, useActionData, useRouteLoaderData } from "react-router-
 import { AuthData } from "./authData";
 import InlineLink from "../../components/InlineLink/InlineLink";
 import utilStyles from "../../App/utilStyles.module.css";
-import GoogleAuthButton from "./GoogleAuthButton";
+
 
 
 export async function registerAction({ request }: { request: Request }) {
-  // https://reactrouter.com/en/main/start/tutorial#data-writes--html-forms
-  // https://reactrouter.com/en/main/route/action
+
   let formData = await request.formData();
   try {
     const email_address = formData.get("email_address");
@@ -61,8 +60,7 @@ export function RegistrationPage() {
         <button type="submit" className={utilStyles.button}>Register</button>
       </Form>
       <p>{registrationError ? registrationError : null}</p>
-      <hr className={utilStyles.separator} />
-      <GoogleAuthButton />
+  
     </div>
   );
 }

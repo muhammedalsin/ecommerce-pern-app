@@ -2,12 +2,9 @@ const bcrypt = require('bcrypt');
 const db = require('./db/index');
 
 
-// ==== Local Login ====
 
-// https://www.passportjs.org/concepts/authentication/password/
-// https://www.passportjs.org/tutorials/password/
-// https://www.passportjs.org/howtos/password/
-// https://medium.com/@prashantramnyc/node-js-with-passport-authentication-simplified-76ca65ee91e5
+
+
 
 async function hashPassword(password) {
   const saltRounds = 10;
@@ -41,13 +38,6 @@ async function localVerify(username, password, done) {
 }
 
 
-// ==== Google Login ====
-
-// https://www.passportjs.org/concepts/authentication/google/
-// https://www.passportjs.org/tutorials/google/
-// https://www.passportjs.org/reference/normalized-profile/
-// https://console.cloud.google.com/apis/dashboard
-
 const googleConfig = {
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -73,10 +63,7 @@ async function googleVerify(issuer, profile, done) {
 }
 
 
-// ==== Serialization and Deserialization ====
 
-// https://www.passportjs.org/concepts/authentication/sessions/
-// https://www.passportjs.org/howtos/session/
 
 function serialize(user, done) {
   process.nextTick(function() {

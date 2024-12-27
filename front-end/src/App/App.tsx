@@ -5,8 +5,7 @@ import Header from "../components/Header/Header";
 
 
 export async function authLoader() {
-  // https://reactrouter.com/en/main/start/tutorial#loading-data
-  // https://reactrouter.com/en/main/route/loader
+
   try {
     const res = await fetch(
       `${process.env.REACT_APP_API_BASE_URL}/auth/status`,

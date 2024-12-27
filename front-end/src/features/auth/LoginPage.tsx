@@ -8,8 +8,7 @@ import utilStyles from "../../App/utilStyles.module.css";
 
 
 export async function loginAction({ request }: { request: Request }) {
-  // https://reactrouter.com/en/main/start/tutorial#data-writes--html-forms
-  // https://reactrouter.com/en/main/route/action
+
   let formData = await request.formData();
   try {
     const username = formData.get("email_address");
@@ -68,9 +67,7 @@ export function LoginPage() {
         <button type="submit" className={utilStyles.button}>Log in</button>
       </Form>
       <p>{loginError ? loginError : null}</p>
-      <hr className={utilStyles.separator} />
-      <GoogleAuthButton />
-      <p>{isGoogleError ? googleError : null}</p>
+    
     </div>
   );
 }
